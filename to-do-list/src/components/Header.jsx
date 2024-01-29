@@ -42,7 +42,7 @@ function Header() {
             To-Do-List
             <AssignmentIcon color='secondary' fontSize='large' 
         sx={{ fontSize: 80, 
-        paddingLeft: 12,
+        paddingLeft: 6,
         
         }}
         />
