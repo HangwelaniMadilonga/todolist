@@ -6,8 +6,8 @@ function Taskview() {
 
 return (
 
-<div>
-<h1 className='taskview'>To-D0-List</h1>
+<div className='task-view'>
+adsfda
 </div>
 )
 }

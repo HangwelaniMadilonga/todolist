@@ -6,8 +6,8 @@ function Sidebar() {
 
 return (
 
-<div>
-<h1 className='sidebar'>To-D0-List</h1>
+<div className='side-bar'>
+asd
 </div>
 )
 }

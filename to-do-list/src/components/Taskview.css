@@ -1,0 +1,8 @@
+.task-view {
+  background-color: aqua;
+  min-height: 42rem;
+  width: 88rem;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+}
