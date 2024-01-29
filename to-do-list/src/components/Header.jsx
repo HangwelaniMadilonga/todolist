@@ -34,11 +34,19 @@ function Header() {
         <ThemeProvider theme={theme}>
       <AppBar position="static" color='primary' >
         <Toolbar>
+        
           <Typography variant="h1" component="div" textAlign={'center'}
            color={'secondary'}
            fontStyle={'italic'} fontWeight={'bold'}
             sx={{ flexGrow: 1 }}>
             To-Do-List
+            <AssignmentIcon color='secondary' fontSize='large' 
+        sx={{ fontSize: 80, 
+        paddingLeft: 12,
+        
+        }}
+        />
+
           </Typography>
         </Toolbar>
       </AppBar>
