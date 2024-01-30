@@ -11,7 +11,7 @@ const myTheme = createTheme({
     },
     secondary: {
       
-      main: '#1d1d1d',
+      main: '#dcdcdc',
       
     },
   },
@@ -21,15 +21,12 @@ const myTheme = createTheme({
 export default function FloatingActionButtonSize() {
   return (
     <Box sx={{ '& > :not(style)': { m: 1 } }}>
+        <ThemeProvider theme={myTheme}>
       <Fab size="small" color="secondary" aria-label="add">
         <AddIcon />
       </Fab>
-      <Fab size="medium" color="secondary" aria-label="add">
-        <AddIcon />
-      </Fab>
-      <Fab color="secondary" aria-label="add">
-        <AddIcon />
-      </Fab>
+      </ThemeProvider>
+
     </Box>
   );
 }
