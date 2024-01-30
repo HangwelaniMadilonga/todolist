@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Header.css'
+import CssBaseline from '@mui/material/CssBaseline';
 
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import Sidebar from './Sidebar';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -30,9 +31,12 @@ const theme = createTheme({
 
 function Header() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ display: 'flex' }}>
+    <CssBaseline />
         <ThemeProvider theme={theme}>
-      <AppBar position="static" color='primary' >
+      <AppBar position="fixed" color='primary' sx={{ zIndex: (theme) => theme.zIndex.drawer + 1,
+      
+      }}>
         <Toolbar>
         
           <Typography variant="h1" component="div" textAlign={'center'}
@@ -41,7 +45,7 @@ function Header() {
             sx={{ flexGrow: 1 }}>
             To-Do-List
             <AssignmentIcon color='secondary' fontSize='large' 
-        sx={{ fontSize: 80, 
+        sx={{ fontSize: 100, 
         paddingLeft: 6,
         
         }}
