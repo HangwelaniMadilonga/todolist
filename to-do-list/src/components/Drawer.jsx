@@ -19,6 +19,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import FloatingActionButtonSize from './AddTaskButton';
 const myTheme = createTheme({
   palette: {
     primary: {
@@ -196,6 +197,7 @@ export default function MiniDrawer() {
             </ListItem>
           ))} */}
         </List>
+        <FloatingActionButtonSize/>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
