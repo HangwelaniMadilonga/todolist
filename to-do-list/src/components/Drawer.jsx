@@ -19,7 +19,13 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
 import FloatingActionButtonSize from './AddTaskButton';
+import TodayIcon from '@mui/icons-material/Today';
+import DoneAllIcon from '@mui/icons-material/DoneAll';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import NotificationImportantIcon from '@mui/icons-material/NotificationImportant';
+import FolderIcon from '@mui/icons-material/Folder';
 const myTheme = createTheme({
   palette: {
     primary: {
