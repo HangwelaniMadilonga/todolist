@@ -171,7 +171,11 @@ export default function MiniDrawer() {
                     justifyContent: 'center',
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index === 0 ? <FormatListNumberedIcon /> : null}
+                  {index === 1 ? <TodayIcon /> : null}
+                  {index === 2 ? <CalendarMonthIcon /> : null}
+                  {index === 3 ? <NotificationImportantIcon  /> : null}
+                  {index === 4 ? <DoneAllIcon  /> : null}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
@@ -196,7 +200,7 @@ export default function MiniDrawer() {
                     justifyContent: 'center',
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <FolderIcon  /> : <MailIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
