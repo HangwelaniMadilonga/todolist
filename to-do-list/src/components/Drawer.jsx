@@ -174,7 +174,7 @@ export default function MiniDrawer() {
         </List>
         <Divider />
         <List>
-          {/* {['Projects', 'Trash', 'Spam'].map((text, index) => (
+          {['Projects'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -195,8 +195,9 @@ export default function MiniDrawer() {
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
-          ))} */}
+          ))}
         </List>
+        
         <FloatingActionButtonSize/>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
