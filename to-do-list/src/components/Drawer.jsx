@@ -26,6 +26,7 @@ import DoneAllIcon from '@mui/icons-material/DoneAll';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import NotificationImportantIcon from '@mui/icons-material/NotificationImportant';
 import FolderIcon from '@mui/icons-material/Folder';
+import FormDialog from './FormModal';
 const myTheme = createTheme({
   palette: {
     primary: {
@@ -208,7 +209,7 @@ export default function MiniDrawer() {
           ))}
         </List>
         
-        <FloatingActionButtonSize/>
+        <FormDialog />
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
