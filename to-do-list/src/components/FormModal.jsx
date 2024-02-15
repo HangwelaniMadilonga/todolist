@@ -57,6 +57,18 @@ export default function FormDialog() {
             autoFocus
             required
             margin="dense"
+            id="Description"
+            name="Description"
+            label="Description"
+            type="Description"
+            fullWidth
+            variant="standard"
+            
+          />
+          <TextField
+            autoFocus
+            required
+            margin="dense"
             id="date"
             name="date"
             
@@ -64,17 +76,7 @@ export default function FormDialog() {
             fullWidth
             variant="standard"
           />
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            id="Description"
-            name="Description"
-            label="Description"
-            type="Description"
-            fullWidth
-            variant="standard"
-          />
+          
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
