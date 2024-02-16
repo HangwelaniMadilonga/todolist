@@ -105,7 +105,7 @@ export default function FormDialog() {
           />
 
         <FormGroup>
-        <FormControlLabel control={<Checkbox defaultChecked />} label="Important" />
+        <FormControlLabel control={<Checkbox />} label="Important" />
         </FormGroup>
           
         </DialogContent>
