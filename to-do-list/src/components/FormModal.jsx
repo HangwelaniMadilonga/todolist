@@ -62,9 +62,11 @@ export default function FormDialog() {
             label="Description"
             type="Description"
             fullWidth
-            variant="standard"
+            multiline
+            variant="outlined"
             
           />
+          <div>
           <TextField
             autoFocus
             required
@@ -72,11 +74,11 @@ export default function FormDialog() {
             id="date"
             name="date"
             
+            
             type="date"
-            fullWidth
             variant="standard"
           />
-          
+          </div>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
