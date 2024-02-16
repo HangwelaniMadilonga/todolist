@@ -11,6 +11,9 @@ import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 const myTheme = createTheme({
   palette: {
     primary: {
@@ -90,19 +93,21 @@ export default function FormDialog() {
             variant="outlined"
             
           />
-          <div>
+          
           <TextField
             autoFocus
             required
             margin="dense"
             id="date"
             name="date"
-            
-            
             type="date"
             variant="standard"
           />
-          </div>
+
+        <FormGroup>
+        <FormControlLabel control={<Checkbox defaultChecked />} label="Important" />
+        </FormGroup>
+          
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
