@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -30,6 +31,7 @@ const myTheme = createTheme({
 });
 export default function FormDialog() {
   const [open, setOpen] = React.useState(false);
+  const [task, addTask] = useState([]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -37,6 +39,13 @@ export default function FormDialog() {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.Target);
+    const payLoad = Object.fromEntries(formData);
   };
 
   return (
@@ -98,9 +107,9 @@ export default function FormDialog() {
             autoFocus
             required
             margin="dense"
-            id="date"
-            name="date"
-            type="date"
+            id="Date"
+            name="Date"
+            type="Date"
             variant="standard"
           />
 
@@ -111,7 +120,7 @@ export default function FormDialog() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button type="submit">Sumbit</Button>
+          <Button type="submit" onSubmit={submitForm}>Sumbit</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
