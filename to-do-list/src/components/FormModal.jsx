@@ -29,7 +29,12 @@ const myTheme = createTheme({
 });
 export default function FormDialog() {
   const [open, setOpen] = React.useState(false);
-  const [task, addTask] = useState([]);
+  const [task, addTask] = useState([{Title: '',Description: '',Date: '',isChecked: 'false'}]);
+  const [checked, setChecked] = React.useState(true);
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -60,7 +65,7 @@ export default function FormDialog() {
             event.preventDefault();
             const formData = new FormData(event.currentTarget);
             const formJson = Object.fromEntries(formData.entries());
-            const Title = formJson.Title;
+            formJson.isImportant = checked; 
             console.log(formJson);
             handleClose();
           },
@@ -105,7 +110,11 @@ export default function FormDialog() {
           />
 
         <FormGroup>
-        <FormControlLabel control={<Checkbox />} label="Important" />
+        <FormControlLabel control={<Checkbox 
+        checked={checked}
+        onChange={handleChange}
+        inputProps={{ 'aria-label': 'controlled' }}
+        />} label="Important" />
         </FormGroup>
           
         </DialogContent>
