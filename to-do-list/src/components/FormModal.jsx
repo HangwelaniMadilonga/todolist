@@ -5,9 +5,7 @@ import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import FloatingActionButtonSize from './AddTaskButton';
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
@@ -41,13 +39,6 @@ export default function FormDialog() {
     setOpen(false);
   };
 
-  const submitForm = (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(e.Target);
-    const payLoad = Object.fromEntries(formData);
-  };
-
   return (
     <React.Fragment>
       
@@ -69,8 +60,8 @@ export default function FormDialog() {
             event.preventDefault();
             const formData = new FormData(event.currentTarget);
             const formJson = Object.fromEntries(formData.entries());
-            const email = formJson.email;
-            console.log(email);
+            const Title = formJson.Title;
+            console.log(formJson);
             handleClose();
           },
         }}
@@ -120,7 +111,7 @@ export default function FormDialog() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button type="submit" onSubmit={submitForm}>Sumbit</Button>
+          <Button type="submit" >Sumbit</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
